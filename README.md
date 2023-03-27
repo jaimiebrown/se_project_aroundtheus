@@ -5,6 +5,7 @@
 - Intro
 - Figma
 - Images
+- Project Link
 
 **Intro**
 
@@ -17,3 +18,7 @@ This project is made so all the elements are displayed correctly on popular scre
 **Images**
 
 All icons were exported directly from Figma as svg files, and all images were provided by Practicum through the project brief.
+
+**Project Link**
+
+- [Link to the project](https://jaimiebrown.github.io/se_project_aroundtheus/)
