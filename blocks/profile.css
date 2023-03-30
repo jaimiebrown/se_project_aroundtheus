@@ -110,7 +110,6 @@
   }
   .profile__info {
     grid-gap: 14px 10px;
-    justify-items: center;
   }
 
   .profile__image {
@@ -124,6 +123,7 @@
     white-space: nowrap;
     overflow: hidden;
     max-width: 196px;
+    justify-items: center;
   }
   .profile__description {
     width: 100%;
