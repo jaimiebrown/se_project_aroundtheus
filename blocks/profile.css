@@ -110,6 +110,8 @@
   }
   .profile__info {
     grid-gap: 14px 10px;
+    margin-left: 19px;
+    margin-right: 19px;
   }
 
   .profile__image {
@@ -117,22 +119,21 @@
     margin-right: 0;
   }
   .profile__title {
+    max-width: 100%;
     font-size: 22px;
     line-height: 1.2;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 196px;
-    justify-self: start;
+    justify-self: center;
   }
   .profile__description {
-    width: 100%;
+    max-width: 100%;
     font-size: 14px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 282px;
   }
 
   .profile__edit-button {
