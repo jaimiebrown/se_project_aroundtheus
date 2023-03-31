@@ -109,6 +109,7 @@
     flex-direction: column;
   }
   .profile__info {
+    grid-template-columns: minmax(auto, 200px) 20px;
     grid-gap: 14px 10px;
     margin-left: 19px;
     margin-right: 19px;
@@ -125,7 +126,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    justify-self: center;
+    text-align: center;
   }
   .profile__description {
     max-width: 100%;
