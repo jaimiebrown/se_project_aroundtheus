@@ -1,31 +1,31 @@
-let initialCards = [
+const initialCards = [
   {
-    name: "Budapest",
-    link: "https://unsplash.com/photos/ezUDjYy17EA)",
+    name: "Maroon Bells",
+    link: "https://unsplash.com/photos/-sUgs6NLFpE",
   },
 
   {
-    name: "Barcelona",
-    link: "https://unsplash.com/photos/LSscVPEyQpI)",
+    name: "Monument Valley",
+    link: "https://unsplash.com/photos/niYTtTIR-u4",
   },
 
   {
-    name: "Bruges",
-    link: "https://unsplash.com/photos/0zOkEQ8LRMs",
+    name: "Smoky Mountains",
+    link: "https://unsplash.com/photos/E4_JtLb6L7g",
   },
 
   {
-    name: "Prague",
-    link: "https://unsplash.com/photos/oK0PIhO2RPg",
+    name: "Antelope Canyon",
+    link: "https://unsplash.com/photos/r4rRdmr6MEo",
   },
 
   {
-    name: "London",
-    link: "https://unsplash.com/photos/mOEqOtmuPG8",
+    name: "Angel Oak",
+    link: "https://unsplash.com/photos/Hzbq4de24kQ",
   },
 
   {
-    name: "Edinburgh",
-    link: "https://unsplash.com/photos/8g6F-8xdszQ",
+    name: "Skagit Valley Tulip Fields",
+    link: "https://unsplash.com/photos/9z3PSK4sn1c",
   },
 ];
