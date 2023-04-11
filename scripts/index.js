@@ -1,31 +1,31 @@
 const initialCards = [
   {
-    name: "Maroon Bells",
-    link: "https://unsplash.com/photos/-sUgs6NLFpE",
+    name: "Yosemite Valley",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
   },
 
   {
-    name: "Monument Valley",
-    link: "https://unsplash.com/photos/niYTtTIR-u4",
+    name: "Lake Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg",
   },
 
   {
-    name: "Smoky Mountains",
-    link: "https://unsplash.com/photos/E4_JtLb6L7g",
+    name: "Bald Mountains",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg",
   },
 
   {
-    name: "Antelope Canyon",
-    link: "https://unsplash.com/photos/r4rRdmr6MEo",
+    name: "Latemar",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg",
   },
 
   {
-    name: "Angel Oak",
-    link: "https://unsplash.com/photos/Hzbq4de24kQ",
+    name: "Vanoise National Park",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg",
   },
 
   {
-    name: "Skagit Valley Tulip Fields",
-    link: "https://unsplash.com/photos/9z3PSK4sn1c",
+    name: "Lago di Braies",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
