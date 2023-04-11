@@ -22,7 +22,7 @@
   margin: 0 19px;
 }
 
-.modal__form_close-button {
+.modal__form-close-button {
   background: transparent url(../images/Close-Icon.svg) no-repeat;
   background-size: contain;
   border: none;
@@ -33,11 +33,11 @@
   height: 40px;
 }
 
-.modal__form_close-button:hover {
+.modal__form-close-button:hover {
   opacity: 0.6;
 }
 
-.modal__form_heading {
+.modal__form-heading {
   color: #000;
   font-family: "Inter", Arial, sans-serif;
   font-weight: 900;
@@ -49,7 +49,7 @@
   margin-bottom: 54px;
 }
 
-.modal__form_fieldset {
+.modal__form-fieldset {
   border: none;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@
   padding: 0;
 }
 
-.modal__form_title {
+.modal__form-title {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -74,7 +74,7 @@
   border-bottom: 1px, rgba(0, 0, 0, 1);
 }
 
-.modal__form_description {
+.modal__form-description {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -86,14 +86,13 @@
   margin-top: 30px;
   margin-left: 36px;
   margin-right: 36px;
-
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px, rgba(0, 0, 0, 1);
 }
 
-.modal__form_submit-button {
+.modal__form-submit-button {
   background: #000;
   color: #ffffff;
   width: 358px;
@@ -105,12 +104,12 @@
   font-family: "Inter", Arial, sans-serif;
 }
 
-.modal__form_submit-button:hover {
+.modal__form-submit-button:hover {
   opacity: 0.8;
 }
 
 @media screen and (min-width: 480px) and (max-width: 570px) {
-  .modal__form_close-button {
+  .modal__form-close-button {
     top: -55px;
     right: 0;
   }
@@ -121,30 +120,30 @@
     width: 282px;
   }
 
-  .modal__form_close-button {
+  .modal__form-close-button {
     width: 26px;
     height: 26px;
     right: 5px;
   }
-  .modal__form_heading {
+  .modal__form-heading {
     font-size: 18px;
     margin-top: 25px;
     margin-left: 22px;
     margin-right: 22px;
     margin-bottom: 75px;
   }
-  .modal__form_title {
+  .modal__form-title {
     font-size: 14px;
     margin-left: 22px;
     margin-right: 22px;
   }
-  .modal__form_description {
+  .modal__form-description {
     font-size: 14px;
     margin-top: 43px;
     margin-left: 22px;
     margin-right: 22px;
   }
-  .modal__form_submit-button {
+  .modal__form-submit-button {
     width: 238px;
     margin-left: 22px;
     margin-right: 22px;
