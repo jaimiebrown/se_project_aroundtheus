@@ -41,6 +41,7 @@
   align-self: center;
   border: 1px solid #fff;
   opacity: 1;
+  cursor: pointer;
 }
 
 .profile__edit-button:hover {
@@ -67,6 +68,7 @@
   border: 2px solid #fff;
   border-radius: 2px;
   opacity: 1;
+  cursor: pointer;
 }
 
 .profile__add-button:hover {
