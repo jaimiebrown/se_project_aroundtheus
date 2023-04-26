@@ -1,3 +1,5 @@
+//CONSTANTS//
+
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -32,7 +34,9 @@ const initialCards = [
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileEditModal = document.querySelector("#edit-modal");
-const profileCloseButton = document.querySelector(".modal__form-close-button");
+const profileCloseButton = profileEditModal.querySelector(
+  ".modal__form-close-button"
+);
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileInputTitle = document.querySelector(".modal__form-title");
@@ -43,15 +47,30 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardTemplate =
   document.querySelector("#card__template").content.firstElementChild;
 const cardListElement = document.querySelector(".cards__list");
+const profileAddCardButton = document.querySelector(".profile__add-button");
+const profileAddCardModal = document.querySelector("#card-modal");
+const profileCloseCardButton = profileAddCardModal.querySelector(
+  ".modal__form-close-button"
+);
 
-function openModal() {
-  profileEditModal.classList.add("modal_opened");
-  profileInputTitle.value = profileTitle.textContent;
-  profileInputDescription.value = profileDescription.textContent;
+//FUNCTIONS//
+
+// function openModal() {
+//   profileEditModal.classList.add("modal_opened");
+//   profileInputTitle.value = profileTitle.textContent;
+//   profileInputDescription.value = profileDescription.textContent;
+// }
+
+function openModal(modal) {
+  modal.classList.add("modal_opened");
 }
 
-function closeModal() {
-  profileEditModal.classList.remove("modal_opened");
+// function closeModal() {
+//   profileEditModal.classList.remove("modal_opened");
+// }
+
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
@@ -71,11 +90,24 @@ function getCardElement(data) {
   return cardElement;
 }
 
-profileEditButton.addEventListener("click", openModal);
+//EVENT LISTENERS
 
-profileCloseButton.addEventListener("click", closeModal);
+profileEditButton.addEventListener("click", () => openModal(profileEditModal));
+
+profileCloseButton.addEventListener("click", () =>
+  closeModal(profileEditModal)
+);
 
 profileEditForm.addEventListener("submit", handleProfileFormSubmit);
+
+profileAddCardButton.addEventListener("click", () =>
+  openModal(profileAddCardModal)
+);
+
+profileCloseCardButton.addEventListener("click", () =>
+  closeModal(profileAddCardModal)
+);
+//FOR EACH LOOPS
 
 initialCards.forEach((data) => {
   const cardElement = getCardElement(data);
