@@ -95,9 +95,18 @@ function getCardElement(data) {
   const cardTitleElement = cardElement.querySelector(".card__title");
   const cardImageElement = cardElement.querySelector(".card__image");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
+
+  cardDeleteButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
 
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-button-active");
+  });
+
+  cardImageElement.addEventListener("click", () => {
+    openModal();
   });
 
   cardTitleElement.textContent = data.name;
