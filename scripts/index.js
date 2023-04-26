@@ -67,6 +67,9 @@ const cardTitleInput =
 const cardUrlInput = profileAddCardFormElement.querySelector(
   ".modal__form-description"
 );
+const previewImageModal = document.querySelector("#preview-image-modal");
+const previewImage = document.querySelector(".modal__image");
+const previewImageCaption = document.querySelector(".modal__image-caption");
 
 //FUNCTIONS//
 
@@ -106,7 +109,9 @@ function getCardElement(data) {
   });
 
   cardImageElement.addEventListener("click", () => {
-    openModal();
+    openModal(previewImageModal);
+    previewImage.setAttribute("src", data.link);
+    previewImageCaption.textContent = cardTitleElement.value;
   });
 
   cardTitleElement.textContent = data.name;

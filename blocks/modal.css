@@ -111,14 +111,14 @@
 }
 
 .modal__image {
-  position: absolute;
-  width: 433px;
-  height: 540px;
   border-radius: 0px;
+  margin: auto;
+  max-height: 540px;
 }
 
 .modal__image-caption {
   position: absolute;
+  background: transparent;
   margin-top: 10px;
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
