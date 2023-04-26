@@ -44,7 +44,7 @@
       <p class="footer__description">© 2022 Around The U.S.</p>
     </footer>
 
-    <div class="modal">
+    <div class="modal" id="edit-modal">
       <div class="modal__container">
         <button type="button" class="modal__form-close-button"></button>
         <form class="modal__form">
@@ -68,6 +68,36 @@
             />
           </fieldset>
           <button type="submit" class="modal__form-submit-button">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal__container">
+        <button type="button" class="modal__form-close-button"></button>
+        <form class="modal__form">
+          <p class="modal__form-heading">New Place</p>
+          <fieldset class="modal__form-fieldset">
+            <label for="title" class="modal__form-label"></label>
+            <input
+              type="text"
+              id="card-title"
+              class="modal__form-title"
+              placeholder="Title"
+              required
+            />
+            <label for="description" class="modal__form-label"></label>
+            <input
+              type="text"
+              id="url"
+              class="modal__form-description"
+              placeholder="Image Link"
+              required
+            />
+          </fieldset>
+          <button type="submit" class="modal__form-submit-button">
+            Create
+          </button>
         </form>
       </div>
     </div>
