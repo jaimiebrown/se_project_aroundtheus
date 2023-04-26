@@ -110,10 +110,16 @@
   opacity: 0.8;
 }
 
+.modal__container_image_modal {
+  background-color: transparent;
+}
+
 .modal__image {
   border-radius: 0px;
   margin: auto;
-  max-height: 540px;
+  max-height: 75vh;
+  max-width: 75vw;
+  object-fit: contain;
 }
 
 .modal__image-caption {
