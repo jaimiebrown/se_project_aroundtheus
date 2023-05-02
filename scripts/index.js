@@ -161,8 +161,8 @@ profileCloseCardButton.addEventListener("click", () =>
   closeModal(profileAddCardModal)
 );
 
-profileAddCardSubmitButton.addEventListener(
-  "click",
+profileAddCardFormElement.addEventListener(
+  "submit",
   handleProfileAddCardSubmit
 );
 
