@@ -136,6 +136,7 @@ function handleProfileAddCardSubmit(evt) {
   });
   cardListElement.prepend(cardElement);
   closeModal(profileAddCardModal);
+  profileAddCardFormElement.reset();
 }
 
 //EVENT LISTENERS
