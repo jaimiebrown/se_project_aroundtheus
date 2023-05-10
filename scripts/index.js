@@ -139,13 +139,15 @@ function handleProfileAddCardSubmit(evt) {
   profileAddCardFormElement.reset();
 }
 
-//EVENT LISTENERS
-
-profileEditButton.addEventListener("click", () => {
+function handleProfileEditButton(evt) {
   openModal(profileEditModal);
   profileInputTitle.value = profileTitle.textContent;
   profileInputDescription.value = profileDescription.textContent;
-});
+}
+
+//EVENT LISTENERS
+
+profileEditButton.addEventListener("click", handleProfileEditButton);
 
 profileCloseButton.addEventListener("click", () =>
   closeModal(profileEditModal)
