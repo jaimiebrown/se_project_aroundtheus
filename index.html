@@ -54,22 +54,24 @@
             <input
               type="text"
               id="title"
-              class="modal__form-title"
+              class="modal__input modal__form-title"
               placeholder="Name"
               minlength="2"
               maxlength="40"
               required
             />
+            <span id="title-error" class="modal__form-error"></span>
             <label for="description" class="modal__form-label"></label>
             <input
               type="text"
               id="description"
-              class="modal__form-description"
+              class="modal__input modal__form-description"
               placeholder="About me"
               minlength="2"
               maxlength="200"
               required
             />
+            <span id="description-error" class="modal__form-error"></span>
           </fieldset>
           <button type="submit" class="modal__form-submit-button">Save</button>
         </form>
@@ -86,18 +88,22 @@
             <input
               type="text"
               id="card-title"
-              class="modal__form-title"
+              class="modal__input modal__form-title"
               placeholder="Title"
+              minlength="1"
+              maxlength="30"
               required
             />
+            <span id="card-title-error" class="modal__form-error"></span>
             <label for="description" class="modal__form-label"></label>
             <input
               type="url"
               id="url"
-              class="modal__form-description"
+              class="modal__input modal__form-description"
               placeholder="Image Link"
               required
             />
+            <span id="url-error" class="modal__form-error"></span>
           </fieldset>
           <button type="submit" class="modal__form-submit-button">
             Create
