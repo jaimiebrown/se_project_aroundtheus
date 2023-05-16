@@ -79,10 +79,20 @@ const cardImageTitle = document.querySelector(".card__title");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", (evt) => closeModalKeypress(evt, modal));
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", (evt) =>
+    closeModalKeypress(evt, modal)
+  );
+}
+
+function closeModalKeypress(evt, modal) {
+  if (evt.key === "escape") {
+    closeModal(modal);
+  }
 }
 
 function renderCard(data, cardListElement) {
@@ -169,6 +179,16 @@ profileAddCardFormElement.addEventListener(
 );
 
 previewImageCloseButton.addEventListener("click", () =>
+  closeModal(previewImageModal)
+);
+
+profileEditModal.addEventListener("click", () => closeModal(profileEditModal));
+
+profileAddCardModal.addEventListener("click", () =>
+  closeModal(profileAddCardModal)
+);
+
+previewImageModal.addEventListener("click", () =>
   closeModal(previewImageModal)
 );
 
