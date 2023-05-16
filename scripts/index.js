@@ -182,11 +182,21 @@ previewImageCloseButton.addEventListener("click", () =>
   closeModal(previewImageModal)
 );
 
-profileEditModal.addEventListener("click", () => closeModal(profileEditModal));
+profileEditModal.addEventListener("mousedown", (evt) => {
+  if (
+    evt.target.classList.contains("modal") ||
+    evt.target.classList.contains("modal__form-close-button")
+  );
+  closeModal(profileEditModal);
+});
 
-profileAddCardModal.addEventListener("click", () =>
-  closeModal(profileAddCardModal)
-);
+profileAddCardModal.addEventListener("mousedown", (evt) => {
+  If(
+    evt.target.classList.contains("modal") ||
+      evt.target.classList.contains("modal__form-close-button")
+  );
+  closeModal(profileAddCardModal);
+});
 
 previewImageModal.addEventListener("click", () =>
   closeModal(previewImageModal)

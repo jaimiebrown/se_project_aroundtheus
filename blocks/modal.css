@@ -150,6 +150,7 @@
 }
 
 .modal__error_visible {
+  visibility: visible;
 }
 
 .modal__container_image_modal {
