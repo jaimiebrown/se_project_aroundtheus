@@ -202,14 +202,7 @@ previewImageModal.addEventListener("click", () =>
   closeModal(previewImageModal)
 );
 
-document.addEventListener("keydown", (e) => {
-  if (
-    e.key === "escape" &&
-    e.target.classList.contains("modal__form-close-button")
-  ) {
-    closeModal("modal__form-close-button");
-  }
-});
+document.addEventListener("keydown", closeModal);
 
 //FOR EACH LOOPS
 
