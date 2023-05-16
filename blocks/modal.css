@@ -119,6 +119,10 @@
   opacity: 0.8;
 }
 
+.modal__form-submit-button:disabled {
+  background-color: #e5e5e5;
+}
+
 .modal__form-error:first-of-type {
   position: absolute;
   top: 148px;
