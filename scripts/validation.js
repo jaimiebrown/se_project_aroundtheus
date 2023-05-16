@@ -20,38 +20,34 @@ function hideInputError(formElement, inputElement, options) {
   errorMessageElement.classList.remove(errorClass);
 }
 
-// const isValid = () => {
-//   if (!inputSelector.validity.valid) {
-//     showInputError(inputSelector, formInput.validationMessage);
-//   } else {
-//     hideInputError(inputSelector);
-//   }
-// };
-
 function checkInputValidity(formElement, inputElement, options) {
   if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, options);
-  } else {
-    hideInputError(formElement, inputElement, options);
+    return showInputError(formElement, inputElement, options);
   }
+  hideInputError(formElement, inputElement, options);
+}
+
+function hasInvalidInput(inputList) {
+  return !inputList.every((inputElement) => inputElement.validity.valid);
+}
+
+function disableButton(submitButton, inactiveButtonClass) {
+  submitButton.classList.add(inactiveButtonClass);
+  submitButton.disabled = true;
+}
+
+function enableButton(submitButton, inactiveButtonClass) {
+  submitButton.classList.remove(inactiveButtonClass);
+  submitButton.disabled = false;
 }
 
 function toggleButtonState(inputElements, submitButton, options) {
   const { inactiveButtonClass } = options;
-  let foundInvalid = false;
-  inputElements.forEach((inputElement) => {
-    if (!inputElement.validity.valid) {
-      foundInvalid = true;
-    }
-  });
-
-  if (foundInvalid) {
-    submitButton.classList.add(inactiveButtonClass);
-    submitButton.disabled = true;
-  } else {
-    submitButton.classList.remove(inactiveButtonClass);
-    submitButton.disabled = false;
+  if (hasInvalidInput(inputElements)) {
+    disableButton(submitButton, inactiveButtonClass);
+    return;
   }
+  enableButton(submitButton, inactiveButtonClass);
 }
 
 function setEventListeners(formElement, options) {
@@ -88,12 +84,3 @@ const configuration = {
 };
 
 enableValidation(configuration);
-
-// enableValidation({sss
-//     formSelector: ".popup__form",
-//     inputSelector: ".popup__input",
-//     submitButtonSelector: ".popup__button",
-//     inactiveButtonClass: "popup__button_disabled",
-//     inputErrorClass: "popup__input_type_error",
-//     errorClass: "popup__error_visible"
-//   });
