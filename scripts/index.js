@@ -83,6 +83,14 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  evt.target.removeEventListener("keydown", (e) => {
+    if (
+      e.key === "escape" &&
+      e.target.classList.contains("modal__form-close-button")
+    ) {
+      closeModal("modal__form-close-button");
+    }
+  });
 }
 
 function renderCard(data, cardListElement) {
@@ -193,6 +201,15 @@ profileAddCardModal.addEventListener("mousedown", (e) => {
 previewImageModal.addEventListener("click", () =>
   closeModal(previewImageModal)
 );
+
+document.addEventListener("keydown", (e) => {
+  if (
+    e.key === "escape" &&
+    e.target.classList.contains("modal__form-close-button")
+  ) {
+    closeModal("modal__form-close-button");
+  }
+});
 
 //FOR EACH LOOPS
 
