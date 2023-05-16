@@ -79,18 +79,19 @@ const cardImageTitle = document.querySelector(".card__title");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeModalKeypress);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  evt.target.removeEventListener("keydown", (e) => {
-    if (
-      e.key === "escape" &&
-      e.target.classList.contains("modal__form-close-button")
-    ) {
-      closeModal("modal__form-close-button");
-    }
-  });
+  evt.target.removeEventListener("keydown", closeModalKeypress);
+}
+
+function closeModalKeypress(evt) {
+  if (evt.key === "escape") {
+    const activeModal = document.querySelectorAll(".modal_opened");
+    closeModal(activeModal);
+  }
 }
 
 function renderCard(data, cardListElement) {
@@ -201,8 +202,6 @@ profileAddCardModal.addEventListener("mousedown", (e) => {
 previewImageModal.addEventListener("click", () =>
   closeModal(previewImageModal)
 );
-
-document.addEventListener("keydown", closeModal);
 
 //FOR EACH LOOPS
 
